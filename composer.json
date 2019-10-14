@@ -1,0 +1,24 @@
+{
+    "name": "cubear/cwd_custom403",
+    "description": "A Drupal 8 module that creates an access denied page with link to login or note saying access denied.",
+    "type": "drupal-custom-module",
+    "license": "GPL-3.0+",
+    "homepage": "https://it.cornell.edu/custom-web",
+    "authors": [
+        {
+            "name": "Alison Jo McCauley",
+            "email": "alison@cornell.edu",
+            "role": "Author"
+        },
+        {
+            "name": "Bill Juda",
+            "email": "wfj24@cornell.edu",
+            "role": "Author"
+        }
+    ],
+    "support": {
+    },
+    "minimum-stability": "dev",
+    "require": {
+    }
+}

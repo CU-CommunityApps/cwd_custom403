@@ -1,0 +1,5 @@
+name: Custom 403 page
+type: module
+description: Creates an access denied page with link to login or note saying access denied.
+core: 8.x
+package: Custom
