@@ -12,6 +12,6 @@ cwd403.custom_configuration:
     _form: '\Drupal\cwd_custom403\Form\Custom403Configuration'
     _title: 'Custom 403 Page Configuration'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'administer site configuration'
   options:
     _admin_route: TRUE

@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class TwoFiveLiveConfiguration.
+ * Class Custom403Configuration.
  */
 class Custom403Configuration extends ConfigFormBase {
 
@@ -37,7 +37,6 @@ class Custom403Configuration extends ConfigFormBase {
       '#default_value' => $config->get('403_custom_text'),
       '#size' => 200,
       '#maxlength' => 255,
-      // '#description' => $this->t('Mapping: field machine name for the localist image'),
       '#required' => true,
     ];
     $form['403_use_cornell'] =[
