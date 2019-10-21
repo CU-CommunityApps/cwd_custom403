@@ -15,10 +15,16 @@ class Cwd403Controller {
   protected function get_markup() {
     $not_logged_in = \Drupal::currentUser()->isAnonymous();
     if($not_logged_in) {
+      $config = \Drupal::config('cwd_custom403.custom403_configuration');
+      $message = $config->getRawData()['403_custom_text'];
       $current_path = \Drupal::request()->getRequestUri();
-      $markup = '<p>Please login to view this page.</p>';
-      $markup .= '<p><a class="link-button" href="/saml_login?destination='.$current_path.'">Login with your Cornell NetID</a></p>';
-      $markup .= '<p><a class="link-button" href="/user/login?destination='.$current_path.'">Login for Non-Cornell users</a></p>';
+      $markup = '<p>'.$message.'</p>';
+      if($config->getRawData()['403_use_cornell']) {
+        $markup .= '<p><a class="link-button" href="/saml_login?destination='.$current_path.'">Login with your Cornell NetID</a></p>';
+      }
+      if($config->getRawData()['403_use_drupal']) {
+        $markup .= '<p><a class="link-button" href="/user/login?destination='.$current_path.'">Login for Non-Cornell users</a></p>';
+      }
       return $markup;
     }
     else {

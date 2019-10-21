@@ -5,3 +5,13 @@ cwd403.content:
     _title: 'Access denied'
   requirements:
     _permission: 'access content'
+
+cwd403.custom_configuration:
+  path: '/admin/config/cwd403'
+  defaults:
+    _form: '\Drupal\cwd_custom403\Form\Custom403Configuration'
+    _title: 'Custom 403 Page Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
