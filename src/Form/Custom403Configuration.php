@@ -40,12 +40,19 @@ class Custom403Configuration extends ConfigFormBase {
       '#maxlength' => 255,
       '#required' => true,
     ];
-    $form['403_use_cornell'] =[
+    $form['login_buttons'] = [
+      '#type' => 'fieldset',
+      '#title' => $this
+        ->t('Enable login buttons'),
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+    ];
+    $form['login_buttons']['403_use_cornell'] =[
       '#type' => 'checkbox',
       '#title' => $this->t('Site uses Cornell SSO login'),
       '#default_value' => $config->get('403_use_cornell'),
     ];
-    $form['403_use_drupal'] =[
+    $form['login_buttons']['403_use_drupal'] =[
       '#type' => 'checkbox',
       '#title' => $this->t('Site uses Drupal login'),
       '#default_value' => $config->get('403_use_drupal'),
