@@ -34,6 +34,7 @@ class Custom403Configuration extends ConfigFormBase {
     $form['403_custom_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Text for 403 page'),
+      '#description' => $this->t('HTML is permitted; shown under page title ("Access denied").'),
       '#default_value' => $config->get('403_custom_text'),
       '#size' => 200,
       '#maxlength' => 255,
