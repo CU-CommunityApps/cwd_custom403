@@ -42,8 +42,7 @@ class Custom403Configuration extends ConfigFormBase {
     ];
     $form['login_buttons'] = [
       '#type' => 'details',
-      '#title' => $this
-        ->t('Enable login buttons'),
+      '#title' => $this->t('Enable login buttons'),
       '#open' => TRUE,
     ];
     $form['login_buttons']['403_use_cornell'] =[
