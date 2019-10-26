@@ -41,11 +41,10 @@ class Custom403Configuration extends ConfigFormBase {
       '#required' => true,
     ];
     $form['login_buttons'] = [
-      '#type' => 'fieldset',
+      '#type' => 'details',
       '#title' => $this
         ->t('Enable login buttons'),
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
+      '#open' => TRUE,
     ];
     $form['login_buttons']['403_use_cornell'] =[
       '#type' => 'checkbox',
