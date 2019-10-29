@@ -38,7 +38,7 @@ class Custom403Configuration extends ConfigFormBase {
       '#default_value' => $config->get('403_custom_text'),
       '#size' => 200,
       '#maxlength' => 255,
-      '#required' => true,
+      '#required' => false,
     ];
     $form['login_buttons'] = [
       '#type' => 'details',
