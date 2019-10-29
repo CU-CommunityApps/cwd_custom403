@@ -34,17 +34,23 @@ class Custom403Configuration extends ConfigFormBase {
     $form['403_custom_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Text for 403 page'),
+      '#description' => $this->t('HTML is permitted; shown under page title ("Access denied").'),
       '#default_value' => $config->get('403_custom_text'),
       '#size' => 200,
       '#maxlength' => 255,
-      '#required' => true,
+      '#required' => false,
     ];
-    $form['403_use_cornell'] =[
+    $form['login_buttons'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Enable login buttons'),
+      '#open' => TRUE,
+    ];
+    $form['login_buttons']['403_use_cornell'] =[
       '#type' => 'checkbox',
       '#title' => $this->t('Site uses Cornell SSO login'),
       '#default_value' => $config->get('403_use_cornell'),
     ];
-    $form['403_use_drupal'] =[
+    $form['login_buttons']['403_use_drupal'] =[
       '#type' => 'checkbox',
       '#title' => $this->t('Site uses Drupal login'),
       '#default_value' => $config->get('403_use_drupal'),

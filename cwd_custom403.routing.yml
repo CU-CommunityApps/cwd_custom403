@@ -2,7 +2,7 @@ cwd403.content:
   path: '/accessdenied'
   defaults:
     _controller: '\Drupal\cwd_custom403\Controller\Cwd403Controller::content'
-    _title: 'Access denied'
+    _title: 'Restricted access - please login to continue.'
   requirements:
     _permission: 'access content'
 

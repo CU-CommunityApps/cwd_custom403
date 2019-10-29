@@ -16,9 +16,12 @@ class Cwd403Controller {
     $not_logged_in = \Drupal::currentUser()->isAnonymous();
     if($not_logged_in) {
       $config = \Drupal::config('cwd_custom403.custom403_configuration');
-      $message = $config->getRawData()['403_custom_text'];
+      $markup = "";
+      if($config->getRawData()['403_custom_text']) {
+        $message = $config->getRawData()['403_custom_text'];
+        $markup = $message;
+      }
       $current_path = \Drupal::request()->getRequestUri();
-      $markup = '<p>'.$message.'</p>';
       if($config->getRawData()['403_use_cornell']) {
         $markup .= '<p><a class="link-button" href="/saml_login?destination='.$current_path.'">Login with your Cornell NetID</a></p>';
       }
