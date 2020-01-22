@@ -4,10 +4,10 @@
 
 To do: information!
 
-After installing the module clear cache.
+After installing the module:
 
-configure `/admin/config/cwd403`
+* clear cache.
 
-In [configuration->system->basic site settings](`/admin/config/system/site-information`)  set default 403 to `/accessdenied`
+* configure `/admin/config/cwd403`
 
-<a href="https://ibb.co/4TQsWft"><img src="https://i.ibb.co/Kq1N6Gh/accessdenied.png" alt="accessdenied" border="0"></a>
+* In [configuration->system->basic site settings](`/admin/config/system/site-information`)  set default 403 to `/accessdenied` <a href="https://ibb.co/4TQsWft"><img src="https://i.ibb.co/Kq1N6Gh/accessdenied.png" alt="accessdenied" border="0"></a>
