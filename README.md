@@ -12,4 +12,4 @@ After installing the module:
 
 * In [configuration->system->basic site settings](`/admin/config/system/site-information`)  set default 403 to `/accessdenied` <a href="https://ibb.co/4TQsWft"><img src="https://i.ibb.co/Kq1N6Gh/accessdenied.png" alt="accessdenied" border="0"></a>
 
-* Go to a fake URL to test, i.e. /asdfgh
+* Go to an admin URL (in a different browser) to test, i.e. /admin
