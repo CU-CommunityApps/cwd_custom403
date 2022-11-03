@@ -14,8 +14,8 @@ class Cwd403Controller {
 
   protected function get_markup() {
     $not_logged_in = \Drupal::currentUser()->isAnonymous();
+    $config = \Drupal::config('cwd_custom403.custom403_configuration');
     if($not_logged_in) {
-      $config = \Drupal::config('cwd_custom403.custom403_configuration');
       $markup = "";
       if($config->getRawData()['403_custom_text']) {
         $message = $config->getRawData()['403_custom_text'];
@@ -31,8 +31,11 @@ class Cwd403Controller {
       return $markup;
     }
     else {
-      $current_path = \Drupal::request()->getRequestUri();
-      $markup = '<p>You don\'t have access to this page.</p>';
+      if($config->getRawData()['403_custom_logged_in_text']) {
+        $markup = $config->getRawData()['403_custom_logged_in_text'];
+      } else {
+        $markup = '<p>You don\'t have access to this page.</p>';
+      }
       return $markup;
     }
   }
